@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./src/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./src/css/all.min.css" />
+    <link rel="stylesheet" href="./dist/output.css" />
+    <title>Party</title>
+  </head>
+  <body class="bg-[#0d0d0d]">
+    <div
+      class="inner-lodingScreen flex justify-center items-center w-full absolute top-0 start-0 end-0 bottom-0 z-[99999999] bg-[#0d0d0d] h-screen"
+    >
+      <div class="sk-chase lodingScreen text-white">
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+      </div>
+    </div>
+
+    <div
+      class="lodingScreenOtherPages flex justify-center items-center w-full absolute top-0 start-0 end-0 bottom-0 z-[99999999] bg-[#0d0d0d] h-screen"
+    >
+      <div class="sk-chase lodingScreen text-white">
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+        <div class="sk-chase-dot"></div>
+      </div>
+    </div>
+
+    <div class="container mx-auto search py-10 hidden">
+      <div class="row justify-center">
+        <div class="w-full md:w-5/12 mx-4 my-3">
+          <input
+            oninput="searchByName(this.value)"
+            class="w-full rounded-lg p-2 focus:shadow-sm focus:shadow-white"
+            type="text"
+            placeholder="Search By Name"
+          />
+        </div>
+        <div class="w-full md:w-5/12 mx-4 my-3">
+          <input
+            oninput="searchByFirstLetter(this.value)"
+            class="w-full rounded-lg p-2 focus:shadow-sm focus:shadow-white"
+            type="text"
+            placeholder="Search By First Letter"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="sideNav absolute z-10">
+      <div class="h-screen fixed flex top-0 text-white bg-[#0d0d0d]">
+        <div class="navLeft flex flex-col justify-between h-screen p-4 pb-10">
+          <div class="links">
+            <ul class="overflow-hidden">
+              <li class="py-3 relative cursor-pointer searchBtn">
+                <a href="#" class="text-decoration-none text-white">Search</a>
+              </li>
+              <li class="py-3 relative cursor-pointer categoryBtn">
+                <a href="#" class="decoration-0 text-white">Categories</a>
+              </li>
+              <li class="py-3 relative cursor-pointer areaBtn">
+                <a class="decoration-0 text-white" href="#">Area</a>
+              </li>
+              <li class="py-3 relative cursor-pointer ingrediantsBtn">
+                <a href="#" class="decoration-0 text-white">Ingredients</a>
+              </li>
+              <li class="py-3 relative cursor-pointer contactBtn">
+                <a href="#" class="decoration-0 text-white">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="nav-footer">
+            <div class="icons px-2">
+              <i class="fa-brands fa-facebook cursor-pointer"></i>
+              <i class="fa-brands fa-twitter cursor-pointer"></i>
+              <i class="fa-solid fa-globe cursor-pointer"></i>
+            </div>
+            <div class="footer text-white">
+              <p>
+                Copyright Â© 2019 All Rights <br />
+                Reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="navRight p-1 bg-white flex flex-col justify-between">
+          <img src="src/img/logo.png" class="w-[50px] self-start" alt="" />
+          <p class="text-center text-3xl font-light">
+            <i class="close fa-solid fa-x text-black cursor-pointer hidden"></i>
+            <i
+              class="open fa-solid fa-align-justify text-black cursor-pointer"
+            ></i>
+          </p>
+          <div>
+            <p class="text-center">
+              <i
+                class="fa-solid fa-globe d-block cursor-pointer text-black"
+              ></i>
+            </p>
+            <p class="text-center">
+              <i class="fa-solid fa-share-nodes cursor-pointer text-black"></i>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mx-auto py-6 px-28">
+      <div class="row myData gap-y-6 text-white "></div>
+    </div>
+
+    <script src="src/js/jquery-3.7.1.min.js"></script>
+    <script src="src/js/main.js"></script>
+  </body>
+</html>
